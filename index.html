@@ -4,33 +4,100 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Crondra Studios</title>
+<meta name="description" content="Crondra Studios makes small, carefully crafted mobile games: Contraption Course and Roll & Goal.">
+<link rel="icon" href="contraption-course.png">
 <style>
-  body { margin: 0; font-family: system-ui, sans-serif; background: #f6f1e7; color: #1d2a3a; }
-  main { max-width: 640px; margin: 0 auto; padding: 48px 16px; }
-  h1 { margin: 0 0 8px; font-size: 2rem; }
-  h2 { margin: 32px 0 8px; font-size: 1.2rem; }
-  p, li { line-height: 1.6; }
-  a { color: #1b5fa8; }
+  :root {
+    --bg: #0f1e33;
+    --bg2: #16304f;
+    --card: #1b3a5e;
+    --line: #2d5684;
+    --text: #f6efe0;
+    --muted: #b9c6d8;
+    --gold: #ffcf4a;
+    --teal: #45d6e0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+    color: var(--text);
+    background: radial-gradient(1200px 600px at 50% -10%, #24507f 0%, var(--bg2) 40%, var(--bg) 100%);
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 56px 16px 40px; }
+  header { text-align: center; margin-bottom: 40px; }
+  .studio { margin: 0; font-size: 2.4rem; letter-spacing: 0.02em; }
+  .studio span { color: var(--gold); }
+  .tagline { margin: 10px 0 0; color: var(--muted); font-size: 1.05rem; }
+  .games { display: grid; gap: 20px; }
+  .game {
+    display: flex; gap: 20px; align-items: flex-start;
+    padding: 22px; border-radius: 22px;
+    background: linear-gradient(180deg, var(--card), #17324f);
+    border: 2px solid var(--line);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  }
+  .icon {
+    flex: none; width: 96px; height: 96px; border-radius: 22px;
+    display: grid; place-items: center; font-size: 46px;
+    background: #0d2238; border: 2px solid var(--line); overflow: hidden;
+  }
+  .icon img { width: 100%; height: 100%; display: block; }
+  .game h2 { margin: 2px 0 4px; font-size: 1.45rem; }
+  .kind { margin: 0 0 8px; color: var(--teal); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; }
+  .game p { margin: 0 0 14px; color: var(--muted); line-height: 1.55; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .links a {
+    padding: 7px 14px; border-radius: 999px; font-size: 0.92rem; text-decoration: none;
+    color: var(--text); background: #0d2238; border: 1px solid var(--line);
+  }
+  .links a:hover { border-color: var(--gold); color: var(--gold); }
+  footer { margin-top: 44px; text-align: center; color: var(--muted); font-size: 0.92rem; }
+  footer a { color: var(--gold); text-decoration: none; }
+  @media (max-width: 520px) {
+    .game { flex-direction: column; align-items: center; text-align: center; }
+    .links { justify-content: center; }
+  }
 </style>
 </head>
 <body>
 <main>
-  <h1>Crondra Studios</h1>
-  <p>Small, carefully made mobile games.</p>
+  <header>
+    <h1 class="studio">Crondra <span>Studios</span></h1>
+    <p class="tagline">Small, carefully crafted mobile games.</p>
+  </header>
 
-  <h2>Contraption Course</h2>
-  <ul>
-    <li><a href="https://sites.google.com/view/contraption-course-privacy">Privacy policy</a></li>
-    <li><a href="https://sites.google.com/view/contraption-course-deletion">Delete your data</a></li>
-  </ul>
+  <section class="games">
+    <article class="game">
+      <div class="icon"><img src="contraption-course.png" alt="Contraption Course icon"></div>
+      <div>
+        <h2>Contraption Course</h2>
+        <p class="kind">CONSTRUCTION PUZZLES</p>
+        <p>Place springs, aim fans and set turntables, then press GO and watch your robot put your plan into action.</p>
+        <div class="links">
+          <a href="https://sites.google.com/view/contraption-course-privacy">Privacy policy</a>
+          <a href="https://sites.google.com/view/contraption-course-deletion">Data deletion</a>
+        </div>
+      </div>
+    </article>
 
-  <h2>Roll &amp; Goal</h2>
-  <ul>
-    <li><a href="https://sites.google.com/view/roll-and-goal-privacy-policy/">Privacy policy</a></li>
-  </ul>
+    <article class="game">
+      <div class="icon" aria-hidden="true">⚽</div>
+      <div>
+        <h2>Roll &amp; Goal</h2>
+        <p class="kind">DICE FOOTBALL</p>
+        <p>Roll the dice, build your dream squad, and outwit your rivals in fast, luck-driven football matches.</p>
+        <div class="links">
+          <a href="https://sites.google.com/view/roll-and-goal-privacy-policy/">Privacy policy</a>
+          <a href="https://sites.google.com/view/roll-and-goal-terms-and-cond/">Terms of use</a>
+          <a href="https://sites.google.com/view/roll-and-goal-data-deletion/">Data deletion</a>
+        </div>
+      </div>
+    </article>
+  </section>
 
-  <h2>Contact</h2>
-  <p><a href="mailto:crondrastudios@gmail.com">crondrastudios@gmail.com</a></p>
+  <footer>Crondra Studios · <a href="mailto:crondrastudios@gmail.com">crondrastudios@gmail.com</a></footer>
 </main>
 </body>
 </html>
